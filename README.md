@@ -1,2 +1,2 @@
 # pixelrun
-A public repo to host pixelrun. Made with Godot engine.
+A public repo to host pixelrun code. Made with Godot engine.
