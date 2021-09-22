@@ -17,33 +17,27 @@ script = ExtResource( 2 )
 [node name="Background" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 5.26453
-margin_top = -2.25623
-margin_right = 5.26453
-margin_bottom = -2.25623
 color = Color( 0.882353, 0.882353, 0.882353, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Horizon" type="ColorRect" parent="."]
-anchor_top = 0.575
-anchor_bottom = 0.575
-margin_top = -3.17102
-margin_right = 1280.0
-margin_bottom = -0.171021
+margin_top = 419.271
+margin_right = 724.0
+margin_bottom = 421.271
 color = Color( 0.286275, 0.156863, 0.0588235, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 82.7795, 350.05 )
-scale = Vector2( 0.7, 0.7 )
+position = Vector2( 63.134, 362.541 )
+scale = Vector2( 0.5, 0.5 )
 collision_mask = 3
 
 [node name="Floor" type="StaticBody2D" parent="."]
-position = Vector2( 82.7001, 449.644 )
+position = Vector2( 72.7882, 442.616 )
 collision_layer = 2
 collision_mask = 2
 __meta__ = {
@@ -58,17 +52,17 @@ wait_time = 2.0
 autostart = true
 
 [node name="Label" type="Label" parent="."]
-anchor_left = 0.5
-anchor_top = 5.29819e-09
-anchor_right = 0.5
-margin_left = -20.0
-margin_top = 46.0
-margin_right = 47.0
-margin_bottom = 95.0
+anchor_left = 0.472
+anchor_right = 0.472
+margin_left = -334.84
+margin_top = 42.0
+margin_right = 142.16
+margin_bottom = 58.0
 rect_scale = Vector2( 1.5, 1.5 )
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.286275, 0.156863, 0.0588235, 1 )
 text = "Score:"
+align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }

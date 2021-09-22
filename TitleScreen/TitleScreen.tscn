@@ -4,17 +4,16 @@
 [ext_resource path="res://Player2/sprite_0.png" type="Texture" id=2]
 [ext_resource path="res://TitleScreen/TitleScreen.gd" type="Script" id=4]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 resource_name = "NewFont"
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFontData" id=3]
+[sub_resource type="DynamicFontData" id=2]
 font_path = "res://Resource/Minecraft.ttf"
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=3]
 resource_local_to_scene = true
-resource_name = "Title"
-font_data = SubResource( 3 )
+font_data = SubResource( 2 )
 
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0
@@ -27,8 +26,6 @@ __meta__ = {
 [node name="Background" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -2.24493
-margin_bottom = -2.24493
 color = Color( 0.882353, 0.882353, 0.882353, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -36,13 +33,13 @@ __meta__ = {
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 0.488
 anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -138.38
-margin_top = -105.122
-margin_right = -10.3798
-margin_bottom = 22.8776
+anchor_bottom = 0.488
+margin_left = -139.159
+margin_top = -127.826
+margin_right = -11.1589
+margin_bottom = 0.173431
 rect_scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
 expand = true
@@ -56,47 +53,66 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -132.0
-margin_top = -209.0
-margin_right = -43.0
-margin_bottom = -193.0
+margin_left = -354.061
+margin_top = -267.995
+margin_right = -115.061
+margin_bottom = -251.995
 rect_scale = Vector2( 3, 3 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.286275, 0.156863, 0.0588235, 1 )
 text = "PIXEL RUN"
-percent_visible = -0.125
+align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="."]
+[node name="High_Score" type="Label" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -62.1779
-margin_top = 155.92
-margin_right = 63.8221
-margin_bottom = 171.92
-custom_fonts/font = SubResource( 1 )
+margin_left = -357.193
+margin_top = 201.609
+margin_right = 360.807
+margin_bottom = 217.609
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.286275, 0.156863, 0.0588235, 1 )
 text = "High Score:"
+align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label2" type="Label" parent="."]
-anchor_left = 0.495
+[node name="Contribute" type="Label" parent="."]
+anchor_left = 0.505
 anchor_top = 0.5
-anchor_right = 0.495
+anchor_right = 0.505
 anchor_bottom = 0.5
-margin_left = -47.5197
-margin_top = -154.851
-margin_right = 46.4803
-margin_bottom = -138.851
-custom_fonts/font = SubResource( 1 )
+margin_left = -355.234
+margin_top = 257.502
+margin_right = 354.766
+margin_bottom = 273.502
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.286275, 0.156863, 0.0588235, 1 )
+text = "Want to contribute? pixelrun.co.za/contribute"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tap_To_Start" type="Label" parent="."]
+anchor_left = 0.493
+anchor_top = 0.5
+anchor_right = 0.493
+anchor_bottom = 0.5
+margin_left = -46.7325
+margin_top = -181.87
+margin_right = 47.2675
+margin_bottom = -165.87
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.286275, 0.156863, 0.0588235, 1 )
 text = "Tap to start"
+align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
