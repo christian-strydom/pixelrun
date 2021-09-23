@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Resource/Minecraft.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Player2/sprite_0.png" type="Texture" id=2]
+[ext_resource path="res://Player/sprite_0.png" type="Texture" id=2]
 [ext_resource path="res://TitleScreen/PixelRunDev.gd" type="Script" id=3]
 [ext_resource path="res://TitleScreen/TitleScreen.gd" type="Script" id=4]
 [ext_resource path="res://TitleScreen/TextFont.tres" type="DynamicFont" id=5]
