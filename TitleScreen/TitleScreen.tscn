@@ -94,7 +94,7 @@ margin_right = 354.766
 margin_bottom = 273.502
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.286275, 0.156863, 0.0588235, 1 )
-text = "Want to contribute? pixelrun.co.za/contribute"
+text = "Want to contribute? pixelrun.co.za/dev"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
