@@ -1,19 +1,15 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Resource/Minecraft.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Player2/sprite_0.png" type="Texture" id=2]
+[ext_resource path="res://TitleScreen/PixelRunDev.gd" type="Script" id=3]
 [ext_resource path="res://TitleScreen/TitleScreen.gd" type="Script" id=4]
+[ext_resource path="res://TitleScreen/TextFont.tres" type="DynamicFont" id=5]
+[ext_resource path="res://TitleScreen/StartGame.gd" type="Script" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 resource_name = "NewFont"
 font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFontData" id=2]
-font_path = "res://Resource/Minecraft.ttf"
-
-[sub_resource type="DynamicFont" id=3]
-resource_local_to_scene = true
-font_data = SubResource( 2 )
 
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0
@@ -75,7 +71,7 @@ margin_left = -357.193
 margin_top = 201.609
 margin_right = 360.807
 margin_bottom = 217.609
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0.286275, 0.156863, 0.0588235, 1 )
 text = "High Score:"
 align = 1
@@ -84,17 +80,17 @@ __meta__ = {
 }
 
 [node name="Contribute" type="Label" parent="."]
-anchor_left = 0.505
+anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 0.505
+anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -355.234
+margin_left = -351.634
 margin_top = 257.502
-margin_right = 354.766
+margin_right = 358.366
 margin_bottom = 273.502
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0.286275, 0.156863, 0.0588235, 1 )
-text = "Want to contribute? pixelrun.co.za/dev"
+text = "Want to contribute?"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -109,10 +105,40 @@ margin_left = -46.7325
 margin_top = -181.87
 margin_right = 47.2675
 margin_bottom = -165.87
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0.286275, 0.156863, 0.0588235, 1 )
 text = "Tap to start"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LinkButton2" type="LinkButton" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1.0
+margin_bottom = -1.0
+mouse_default_cursor_shape = 0
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LinkButton" type="LinkButton" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -71.0
+margin_top = 277.0
+margin_right = 74.0
+margin_bottom = 301.0
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.184314, 0.184314, 0.184314, 1 )
+text = "pixelrun.co.za/dev"
+underline = 2
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
