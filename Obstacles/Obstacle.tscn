@@ -95,7 +95,6 @@ position = Vector2( 0, -10.011 )
 scale = Vector2( 0.762848, 0.788749 )
 frames = SubResource( 1 )
 animation = "scope_creep"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -14,7 +14,7 @@ func _on_Timer_timeout():
 	add_child(obstacle)
 
 	rng.randomize()
-	$Timer.wait_time = rng.randf_range(1.2, 2.0)
+	$Timer.wait_time = rng.randf_range(1.4, 2.6)
 	$Timer.start()
 
 func _process(delta):
