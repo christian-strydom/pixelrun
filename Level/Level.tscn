@@ -23,9 +23,9 @@ __meta__ = {
 }
 
 [node name="Horizon" type="ColorRect" parent="."]
-margin_top = 419.271
+margin_top = 417.271
 margin_right = 724.0
-margin_bottom = 421.271
+margin_bottom = 419.271
 color = Color( 0.286275, 0.156863, 0.0588235, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
