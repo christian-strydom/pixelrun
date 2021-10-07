@@ -29,6 +29,10 @@ window/size/height=1280
 window/size/test_width=720
 window/size/test_height=1280
 
+[global]
+
+etc=false
+
 [input]
 
 ui_accept={
@@ -64,6 +68,7 @@ jump={
 
 quality/intended_usage/framebuffer_allocation=0
 quality/intended_usage/framebuffer_allocation.mobile=0
+vram_compression/import_etc=true
 quality/directional_shadow/size=720
 quality/directional_shadow/size.mobile=1280
 quality/shadow_atlas/size=720

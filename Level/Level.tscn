@@ -32,14 +32,14 @@ __meta__ = {
 }
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 63.134, 362.541 )
-scale = Vector2( 0.5, 0.5 )
-z_index = 1
+position = Vector2( 46.4851, 387.514 )
+scale = Vector2( 0.3, 0.3 )
+z_index = 5
 collision_mask = 3
 
 [node name="Floor" type="StaticBody2D" parent="."]
 position = Vector2( 72.7882, 442.616 )
-z_index = 1
+z_index = 5
 collision_layer = 2
 collision_mask = 2
 __meta__ = {
@@ -75,6 +75,14 @@ autostart = true
 [node name="CloudTimer" type="Timer" parent="."]
 autostart = true
 
+[node name="TreeTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="MountainTimer" type="Timer" parent="."]
+autostart = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_ScoreTimer_timeout"]
 [connection signal="timeout" from="CloudTimer" to="." method="_on_CloudTimer_timeout"]
+[connection signal="timeout" from="TreeTimer" to="." method="_on_TreeTimer_timeout"]
+[connection signal="timeout" from="MountainTimer" to="." method="_on_MountainTimer_timeout"]

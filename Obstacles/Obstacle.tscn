@@ -33,6 +33,11 @@ animations = [ {
 "name": "budget",
 "speed": 10.0
 }, {
+"frames": [ ExtResource( 13 ), ExtResource( 20 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "no_planning",
+"speed": 10.0
+}, {
 "frames": [ ExtResource( 18 ), ExtResource( 11 ), ExtResource( 26 ) ],
 "loop": true,
 "name": "bad_requirements",
@@ -43,9 +48,9 @@ animations = [ {
 "name": "deadlines",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 15 ), ExtResource( 24 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 9 ) ],
 "loop": true,
-"name": "limited_resources",
+"name": "context_switching",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 10 ), ExtResource( 12 ), ExtResource( 23 ) ],
@@ -53,19 +58,14 @@ animations = [ {
 "name": "scope_creep",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 13 ), ExtResource( 20 ), ExtResource( 7 ) ],
-"loop": true,
-"name": "no_planning",
-"speed": 10.0
-}, {
 "frames": [ ExtResource( 14 ), ExtResource( 8 ), ExtResource( 21 ) ],
 "loop": true,
 "name": "no_unit_tests",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 15 ), ExtResource( 24 ) ],
 "loop": true,
-"name": "context_switching",
+"name": "limited_resources",
 "speed": 10.0
 } ]
 
@@ -75,8 +75,8 @@ height = 88.5946
 
 [node name="Obstacle" type="Area2D"]
 position = Vector2( 808, 404 )
-scale = Vector2( 0.7, 0.7 )
-z_index = 1
+scale = Vector2( 0.5, 0.5 )
+z_index = 5
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -95,6 +95,7 @@ position = Vector2( 0, -10.011 )
 scale = Vector2( 0.762848, 0.788749 )
 frames = SubResource( 1 )
 animation = "scope_creep"
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
