@@ -13,9 +13,9 @@ height = 88.5946
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 3 ) ],
+"frames": [ ExtResource( 5 ) ],
 "loop": true,
-"name": "Cloud3",
+"name": "Cloud2",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
@@ -23,9 +23,9 @@ animations = [ {
 "name": "Cloud4",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 5 ) ],
+"frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "Cloud2",
+"name": "Cloud3",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ) ],

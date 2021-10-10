@@ -1,27 +1,33 @@
 extends Node
 var RunSpeed = 1
+var obstacle_list = ["BAD REQUIREMENTS","BUDGET","CONTEXT SWITCHING","DEADLINES","LIMITED RESOURCES","NO PLANNING","NO UNIT TESTS","SCOPE CREEP"]
 
 const OBSTACLE = preload("res://Obstacles/Obstacle.tscn")
 const CLOUD = preload("res://Background/Cloud.tscn")
 const TREE = preload("res://Background/Tree.tscn")
 const MOUNTAIN = preload("res://Background/Mountain.tscn")
+const BIRD = preload("res://Background/Bird.tscn")
 var rng = RandomNumberGenerator.new()
 
 func _ready():
 	Global.score_time = 0
 
-func _on_Timer_timeout():
+func _on_ObstacleTimer_timeout():
 	var obstacle = OBSTACLE.instance()
-	RunSpeed *= 1.005
+	RunSpeed *= Global.INCREASE_FACTOR
 	obstacle.MonsterSpeed = RunSpeed
+	randomize()
+	var current_obstacle = obstacle_list[randi() % obstacle_list.size()]
+	obstacle.Obstacle = current_obstacle
 	add_child(obstacle)
+	$ObstacleLabel.text = "OBSTACLE: " + str(current_obstacle)
 
 	rng.randomize()
-	$Timer.wait_time = rng.randf_range(1.4, 2.6)
-	$Timer.start()
+	$ObstacleTimer.wait_time = rng.randf_range(1.4, 2.6)
+	$ObstacleTimer.start()
 
 func _process(delta):
-	$Label.text = "Score:" + str(Global.score_time)
+	$Label.text = "SCORE:" + str(Global.score_time)
 
 func _on_ScoreTimer_timeout():
 	Global.score_time += 1
@@ -68,3 +74,18 @@ func _on_MountainTimer_timeout():
 	
 	$MountainTimer.wait_time = rng.randf_range(3, 8)
 	$MountainTimer.start()
+
+
+func _on_BirdTimer_timeout():
+	var bird = BIRD.instance()
+	add_child(bird)
+	rng.randomize()
+	bird.position.y = rng.randf_range(50,350)
+	bird.BirdSpeed = RunSpeed
+	
+	var scaleFactor = rng.randf_range(0.5,0.7)
+	bird.scale.y = scaleFactor
+	bird.scale.x = scaleFactor
+	
+	$BirdTimer.wait_time = rng.randf_range(2, 7)
+	$BirdTimer.start()

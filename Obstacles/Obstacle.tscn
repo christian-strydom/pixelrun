@@ -28,44 +28,44 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 19 ), ExtResource( 17 ), ExtResource( 22 ) ],
-"loop": true,
-"name": "budget",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 13 ), ExtResource( 20 ), ExtResource( 7 ) ],
-"loop": true,
-"name": "no_planning",
-"speed": 10.0
-}, {
 "frames": [ ExtResource( 18 ), ExtResource( 11 ), ExtResource( 26 ) ],
 "loop": true,
-"name": "bad_requirements",
+"name": "BAD REQUIREMENTS",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 16 ), ExtResource( 5 ), ExtResource( 25 ) ],
+"frames": [ ExtResource( 19 ), ExtResource( 17 ), ExtResource( 22 ) ],
 "loop": true,
-"name": "deadlines",
+"name": "BUDGET",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 9 ) ],
 "loop": true,
-"name": "context_switching",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 10 ), ExtResource( 12 ), ExtResource( 23 ) ],
-"loop": true,
-"name": "scope_creep",
+"name": "CONTEXT SWITCHING",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 14 ), ExtResource( 8 ), ExtResource( 21 ) ],
 "loop": true,
-"name": "no_unit_tests",
+"name": "NO UNIT TESTS",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 5 ), ExtResource( 25 ) ],
+"loop": true,
+"name": "DEADLINES",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 20 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "NO PLANNING",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 15 ), ExtResource( 24 ) ],
 "loop": true,
-"name": "limited_resources",
+"name": "LIMITED RESOURCES",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 12 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "SCOPE CREEP",
 "speed": 10.0
 } ]
 
@@ -74,7 +74,7 @@ radius = 75.3259
 height = 88.5946
 
 [node name="Obstacle" type="Area2D"]
-position = Vector2( 808, 404 )
+position = Vector2( 808.891, 403.555 )
 scale = Vector2( 0.5, 0.5 )
 z_index = 5
 script = ExtResource( 2 )
@@ -94,8 +94,7 @@ scale = Vector2( 12.0275, 9.23593 )
 position = Vector2( 0, -10.011 )
 scale = Vector2( 0.762848, 0.788749 )
 frames = SubResource( 1 )
-animation = "scope_creep"
-frame = 2
+animation = "SCOPE CREEP"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

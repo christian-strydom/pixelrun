@@ -8,7 +8,7 @@ func _ready():
 	$AnimatedSprite.animation = current_cloud
 
 func _process(delta):
-	position.x -= 100 * delta * CloudSpeed
+	position.x -= 50 * delta * CloudSpeed
 
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()

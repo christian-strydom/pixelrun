@@ -1,8 +1,9 @@
 extends KinematicBody2D
 
-const GRAVITY = 10 
-const JUMP_SPEED = -400
+var GRAVITY = 10 
+var JUMP_SPEED = -400
 var velocity = Vector2.ZERO
+var RunSpeed = 1
 
 func _process(delta):
 	velocity.y += GRAVITY
@@ -19,3 +20,10 @@ func _process(delta):
 
 func end_game():
 	get_tree().change_scene("res://TitleScreen/TitleScreen.tscn")
+
+
+func _on_ObstacleTimer_timeout():
+	RunSpeed *= Global.INCREASE_FACTOR
+	GRAVITY *= Global.INCREASE_FACTOR
+	JUMP_SPEED *= Global.INCREASE_FACTOR*1
+	$AnimatedSprite.speed_scale = RunSpeed

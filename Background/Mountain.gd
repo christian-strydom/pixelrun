@@ -8,7 +8,7 @@ func _ready():
 	$AnimatedSprite.animation = current_mountain
 
 func _process(delta):
-	position.x -= 200 * delta * MountainSpeed
+	position.x -= 150 * delta * MountainSpeed
 
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
